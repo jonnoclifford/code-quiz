@@ -7,15 +7,29 @@
     <title>Highscores</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/dark-mode.js"></script>
   </head>
 
-  <body>
-    <div class="wrapper">
-      <h1>Highscores</h1>
-      <ol id="highscores"></ol>
-
+  <body class="light-mode">
+    <div class="header">
       <a href="index.html"><button>Go Back</button></a>
-      <button id="clear">Clear Highscores</button>
+
+      <div class="mode-btn"><button id="dark-mode-toggle" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button></div>
+
+      <button id="clear">Clear scores</button>
+      </div>
+
+      <div class="scores-wrapper">
+      <h1>Highscores</h1>
+      <ol id="highscores">
+        <li>10000</li>
+        <li>10000</li>
+        <li>10000</li>
+        <li>10000</li>
+      </ol>
+
+
+
     </div>
 
     <script src="./assets/js/scores.js"></script>

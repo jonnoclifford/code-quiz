@@ -4,13 +4,13 @@ body {
 }
 
 a {
-  color: #125b04;
+  color: #201257;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #42a02f;
+  color: #36247c;
 }
 
 button {
@@ -18,7 +18,7 @@ button {
   margin: 5px;
   cursor: pointer;
   font-size: 100%;
-  background-color: #125b04;
+  background-color: #201257;
   border-radius: 10px;
   padding: 10px 20px;
   color: white;
@@ -27,7 +27,7 @@ button {
 }
 
 button:hover {
-  background-color: #42a02f;
+  background-color: #36247c;
 }
 
 .choices button {
@@ -56,6 +56,15 @@ li:nth-child(odd) {
 .wrapper {
   margin: 100px auto 0 auto;
   max-width: 600px;
+  text-align: center;
+}
+
+.scores-wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 600px;
+  text-align: center;
+  border: 2px solid #201257;
+  border-radius: 10px;
 }
 
 .hide {
@@ -71,13 +80,14 @@ li:nth-child(odd) {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 2px solid #125b04;
+  border-bottom: 2px solid #201257;
 }
 
 .scores,
 .mode-btn,
 .timer {
   flex: 1;
+  width: 33%;
 }
 
 .scores {
@@ -110,6 +120,10 @@ body.dark-mode .header {
   border-bottom: 2px solid #a0a0a0;
 }
 
+body.dark-mode .scores-wrapper {
+  border: 2px solid #c0c0c0;
+}
+
 body.light-mode {
   background-color: #f8f8f8;
   color: #000;
@@ -137,5 +151,9 @@ body.dark-mode {
 }
 
 .dark-mode li:nth-child(odd) {
-  background-color: #333;
+  background-color: #575757;
+}
+
+.dark-mode li:nth-child(even) {
+  background-color: #201257;
 }
