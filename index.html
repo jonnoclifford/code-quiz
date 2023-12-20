@@ -7,15 +7,21 @@
     <title>Coding Quiz</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/dark-mode.js"></script>
   </head>
 
-  <body>
+  <body class="light-mode">
+    <div class="header">
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
-    <div class="timer">Time: <span id="time">0</span></div>
+    <div class="mode-btn"><button id="dark-mode-toggle" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button></div>
 
+    <div class="timer">Time: <span id="time">60 seconds</span></div>
+    </div>
     <div class="wrapper">
       <div id="start-screen" class="start">
+
+
         <h1>Coding Quiz Challenge</h1>
         <p>
           Try to answer the following code-related questions within the time
