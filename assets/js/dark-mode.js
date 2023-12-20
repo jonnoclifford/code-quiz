@@ -4,6 +4,9 @@ function toggleDarkMode() {
 
   const darkModeEnabled = body.classList.contains('dark-mode');
   localStorage.setItem('darkModeEnabled', darkModeEnabled);
+
+  const darkModeButton = document.getElementById('dark-mode-toggle');
+  darkModeButton.textContent = darkModeEnabled ? 'Light Mode' : 'Dark Mode';
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,9 +17,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const darkModeButton = document.getElementById('dark-mode-toggle');
-  if (body.classList.contains('dark-mode')) {
-    darkModeButton.innerText = 'Light Mode';
-  } else {
-    darkModeButton.innerText = 'Dark Mode';
-  }
-})
+  darkModeButton.textContent = darkModeEnabled ? 'Light Mode' : 'Dark Mode';
+});

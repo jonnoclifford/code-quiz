@@ -53,7 +53,9 @@ Supported by Edx teaching staff and multiple websites, YouTube tutorials and for
 
 • The best light/dark mode theme toggle in JavaScript - Salma Alam-Naylor: https://whitep4nth3r.com/blog/best-light-dark-mode-theme-toggle-javascript/
 
-Stack Overflow - Storing function in localstorage - https://stackoverflow.com/questions/38926530/javascript-store-function-in-localstorage
+Stack Overflow - Storing function in localstorage: https://stackoverflow.com/questions/38926530/javascript-store-function-in-localstorage
+
+Stack Overflow - Save dark mode in localstorage: https://stackoverflow.com/questions/62047483/save-dark-mode-to-local-storage-in-javascript
 
 ## License
 
