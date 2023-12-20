@@ -51,15 +51,7 @@ Supported by Edx teaching staff and multiple websites, YouTube tutorials and for
 
 • How To - Toggle Dark Mode: https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
 
-• How To Generate a Password Random Using JavaScript: GreatStack: https://www.youtube.com/watch?v=Xrsb9SiF3a8
-
-• Random Password Generator in JavaScript: Beginner Tutorial - Code Radiance: https://www.youtube.com/watch?v=m5XF1OQ6rSg
-
-• Build A Password Generator With JavaScript - Tutorial - Web Dev Simplified: https://www.youtube.com/watch?v=iKo9pDKKHnc
-
-• Build a Password Generator with JavaScript - Scaler Topics: https://www.scaler.com/topics/password-generator-javascript/
-
-• Random Password Generator using Javascript - DEV: https://dev.to/code_mystery/random-password-generator-using-javascript-6a
+• The best light/dark mode theme toggle in JavaScript - Salma Alam-Naylor: https://whitep4nth3r.com/blog/best-light-dark-mode-theme-toggle-javascript/
 
 
 ## License
