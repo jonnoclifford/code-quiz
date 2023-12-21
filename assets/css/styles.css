@@ -220,3 +220,12 @@ body.dark-mode {
 .toggle-checkbox:checked + .toggle-label:before {
   transform: translateX(26px);
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 550px) {
+  .label-left,
+  .label-right {
+    display: none;
+  }
+}
