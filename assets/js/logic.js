@@ -1,5 +1,5 @@
 document.getElementById('start').addEventListener('click', function () {
-  startTimer(60);
+  startTimer(10);
 });
 
 let timerInterval;

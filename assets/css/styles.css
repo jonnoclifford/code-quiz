@@ -10,14 +10,14 @@ a {
 }
 
 a:hover {
-  color: #36247c;
+  color: #563d7c;
 }
 
 button {
   display: inline-block;
   margin: 5px;
   font-size: 100%;
-  background-color: #201257;
+  background-color: #563d7c;
   border-radius: 10px;
   padding: 10px 20px;
   color: white;
@@ -143,15 +143,15 @@ body.dark-mode {
 }
 
 .dark-mode a:hover {
-  color: #c0c0c0;
+  color: #563d7c;
 }
 
 .dark-mode button {
-  background-color: #a0a0a0;
+  background-color: #563d7c;
 }
 
 .dark-mode button:hover {
-  background-color: #c0c0c0;
+  background-color: #36247c;
 }
 
 .dark-mode li:nth-child(odd) {
@@ -159,5 +159,64 @@ body.dark-mode {
 }
 
 .dark-mode li:nth-child(even) {
-  background-color: #2d1a7a;
+  background-color: #563d7c;
+}
+
+
+/* SLIDER SWITCH */
+
+.switch-container {
+  display: flex;
+  width: 33.33%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.label-left,
+.label-right {
+  margin: 0 10px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #563d7c;
+  border-radius: 34px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #563d7c;
+}
+
+.toggle-checkbox:checked + .toggle-label:before {
+  transform: translateX(26px);
 }

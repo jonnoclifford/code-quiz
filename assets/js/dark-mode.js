@@ -1,21 +1,46 @@
 function toggleDarkMode() {
   const body = document.body;
-  body.classList.toggle('dark-mode');
+  const header = document.querySelector('.header');
+  const scoresWrapper = document.querySelector('.scores-wrapper');
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
 
-  const darkModeEnabled = body.classList.contains('dark-mode');
-  localStorage.setItem('darkModeEnabled', darkModeEnabled);
+  body.style.transition = 'none';
 
-  const darkModeButton = document.getElementById('dark-mode-toggle');
-  darkModeButton.textContent = darkModeEnabled ? 'Light Mode' : 'Dark Mode';
+  const isDarkMode = body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', isDarkMode);
+
+  [header, scoresWrapper].forEach(element => element.classList.toggle('dark-mode'));
+  updateElementsInDarkMode(isDarkMode);
+
+  setTimeout(() => {
+    body.style.transition = '';
+  }, 2000);
+
+  darkModeToggle.checked = isDarkMode;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+function updateElementsInDarkMode(isDarkMode) {
+  const links = document.querySelectorAll('a');
+  const buttons = document.querySelectorAll('button');
 
-  if (darkModeEnabled) {
+  links.forEach(link => {
+    link.style.color = isDarkMode ? '#a0a0a0' : '#563d7c';
+  });
+
+  buttons.forEach(button => {
+    button.style.backgroundColor = isDarkMode ? '#563d7c !important' : '#36247c !important';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+  darkModeToggle.checked = savedDarkMode;
+
+  if (savedDarkMode) {
     document.body.classList.add('dark-mode');
+    [document.querySelector('.header'), document.querySelector('.scores-wrapper')].forEach(element => element.classList.add('dark-mode'));
+    updateElementsInDarkMode(true);
   }
-
-  const darkModeButton = document.getElementById('dark-mode-toggle');
-  darkModeButton.textContent = darkModeEnabled ? 'Light Mode' : 'Dark Mode';
 });

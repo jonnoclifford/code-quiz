@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Highscores</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Highscores</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <script src="./assets/js/dark-mode.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Set the initial state of the dark mode toggle based on the body class
+      const body = document.body;
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      darkModeToggle.checked = body.classList.contains('dark-mode');
 
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/dark-mode.js"></script>
-  </head>
+      // Add event listener to update dark mode when the toggle is clicked
+      darkModeToggle.addEventListener('change', function () {
+        toggleDarkMode();
+      });
+    });
+  </script>
+</head>
 
-  <body class="light-mode">
-    <div class="header">
-      <a class="view-scores" href="index.html"><button>Go Back</button></a>
+<body class="light-mode">
+  <div class="header">
+    <a class="view-scores" href="index.html"><button>Go Back</button></a>
+    <div class="switch-container">
+      <div class="label-left">Light</div>
 
-      <div class="mode-btn"><button id="dark-mode-toggle" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button></div>
-
-      <button class="clear-scores" id="clear">Clear scores</button>
+      <div class="dark-mode-switch">
+        <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+        <label for="dark-mode-toggle" class="toggle-label"></label>
       </div>
+
+      <div class="label-right">Dark</div>
+    </div>
+    <button class="clear-scores" id="clear">Clear scores</button>
+  </div>
+
 
       <div class="scores-wrapper">
       <h1>Highscores</h1>

@@ -12,12 +12,20 @@
 
   <body class="light-mode">
     <div class="header">
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+      <div class="scores"><a class="view-scores" href="highscores.html"><button>View Highscores</button></a></div>
+      <div class="switch-container">
+        <div class="label-left">Light</div>
 
-    <div class="mode-btn"><button id="dark-mode-toggle" class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button></div>
+        <div class="dark-mode-switch">
+          <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox" onclick="toggleDarkMode()">
+          <label for="dark-mode-toggle" class="toggle-label"></label>
+        </div>
 
-    <div class="timer">Time: <span id="time">60 seconds</span></div>
+        <div class="label-right">Dark</div>
+      </div>
+      <div class="timer">Time Remaining: <span id="time">60 seconds</span></div>
     </div>
+
     <div class="wrapper">
       <div id="start-screen" class="start">
 
