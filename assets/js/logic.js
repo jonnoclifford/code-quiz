@@ -45,7 +45,6 @@ function saveHighScore() {
   if (initials !== '') {
     const highscores = JSON.parse(localStorage.getItem('highscores')) || [];
 
-    // Calculate the score based on seconds remaining
     const score = Math.max(0, Math.floor(timerValue / 1000));
 
     const newScore = {
@@ -73,7 +72,6 @@ function saveHighScore() {
     alert('Please enter your initials, Good Knight.');
   }
 }
-
 
 function playCorrectSound() {
   correctSound.play();

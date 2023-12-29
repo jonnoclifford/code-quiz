@@ -68,7 +68,6 @@ function displayQuestion() {
   });
 }
 
-
 function showEndScreen() {
   document.getElementById('questions').classList.add('hide');
   document.getElementById('end-screen').classList.remove('hide');
