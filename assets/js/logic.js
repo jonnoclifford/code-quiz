@@ -45,20 +45,23 @@ function saveHighScore() {
   if (initials !== '') {
     const highscores = JSON.parse(localStorage.getItem('highscores')) || [];
 
+    // Calculate the score based on seconds remaining
+    const score = Math.max(0, Math.floor(timerValue / 1000));
+
     const newScore = {
       initials: initials,
-      score: userScore
+      score: score
     };
 
     highscores.push(newScore);
     localStorage.setItem('highscores', JSON.stringify(highscores));
 
-    if (userScore === questionsData.length) {
+    if (score >= 45) {
       fullScoreSound.onended = function () {
         window.location.href = 'highscores.html';
       };
       playFullScoreSound();
-    } else if (userScore === 0) {
+    } else if (score <= 15) {
       noScoreSound.onended = function () {
         window.location.href = 'highscores.html';
       };
@@ -70,6 +73,7 @@ function saveHighScore() {
     alert('Please enter your initials, Good Knight.');
   }
 }
+
 
 function playCorrectSound() {
   correctSound.play();
@@ -94,7 +98,7 @@ function playNoScoreSound() {
 function showEndScreen() {
   document.getElementById('questions').classList.add('hide');
   document.getElementById('end-screen').classList.remove('hide');
-  document.getElementById('final-score').textContent = userScore;
+  document.getElementById('final-score').textContent = (timerValue / 1000).toFixed(2);
 
   document.getElementById('submit').addEventListener('click', saveHighScore);
 }
