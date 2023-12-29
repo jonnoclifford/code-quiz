@@ -1,12 +1,16 @@
 document.getElementById('start').addEventListener('click', function () {
+  playStartSound();
   startTimer(60);
 });
 
 let timerInterval;
 let timerValue;
 
-const correctSound = new Audio('./assets/sfx/correct.wav');
-const incorrectSound = new Audio('./assets/sfx/incorrect.wav');
+const correctSound = new Audio('./assets/sfx/mp-correct.mp3');
+const incorrectSound = new Audio('./assets/sfx/mp-incorrect.mp3');
+const startSound = new Audio('./assets/sfx/mp-start.mp3');
+const fullScoreSound = new Audio('./assets/sfx/mp-full-score.mp3');
+const noScoreSound = new Audio('./assets/sfx/mp-zero-score.mp3');
 
 function startTimer(initialSeconds) {
   timerValue = initialSeconds * 1000;
@@ -49,9 +53,17 @@ function saveHighScore() {
     highscores.push(newScore);
     localStorage.setItem('highscores', JSON.stringify(highscores));
 
+    // GOT TO GET THIS WORKING!!
+    if (userScore === questionsData.length) {
+      playFullScoreSound();
+    } else if (userScore === 0) {
+      playNoScoreSound();
+    }
+    //
+
     window.location.href = 'highscores.html';
   } else {
-    alert('Please enter your initials.');
+    alert('Please enter your initials, good Knight.');
   }
 }
 
@@ -61,6 +73,18 @@ function playCorrectSound() {
 
 function playIncorrectSound() {
   incorrectSound.play();
+}
+
+function playStartSound() {
+  startSound.play();
+}
+
+function playFullScoreSound() {
+  fullScoreSound.play();
+}
+
+function playNoScoreSound() {
+  noScoreSound.play();
 }
 
 function showEndScreen() {
