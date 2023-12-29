@@ -1,7 +1,5 @@
 function toggleDarkMode() {
   const body = document.body;
-  const header = document.querySelector('.header');
-  const scoresWrapper = document.querySelector('.scores-wrapper');
   const darkModeToggle = document.getElementById('dark-mode-toggle');
 
   body.style.transition = 'none';
@@ -9,7 +7,6 @@ function toggleDarkMode() {
   const isDarkMode = body.classList.toggle('dark-mode');
   localStorage.setItem('darkMode', isDarkMode);
 
-  [header, scoresWrapper].forEach(element => element.classList.toggle('dark-mode'));
   updateElementsInDarkMode(isDarkMode);
 
   setTimeout(() => {
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (savedDarkMode) {
     document.body.classList.add('dark-mode');
-    [document.querySelector('.header'), document.querySelector('.scores-wrapper')].forEach(element => element.classList.add('dark-mode'));
     updateElementsInDarkMode(true);
   }
 });
