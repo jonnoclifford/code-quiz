@@ -1,28 +1,28 @@
 const questionsData = [
   {
     question: "What is the airspeed velocity of an unladen swallow?",
-    choices: ["African or European?", "24 mph", "12 km/h", "I don't know that!"],
-    correctAnswer: "African or European?"
+    choices: ["1. African or European?", "2. 24 mph", "3. 12 km/h", "4. I don't know that!"],
+    correctAnswer: "1. African or European?"
   },
   {
     question: "What is the Holy Hand Grenade of Antioch counting to before being thrown?",
-    choices: ["1", "2", "3", "5"],
-    correctAnswer: "3"
+    choices: ["1. 1", "2. 2", "3. 3", "4. 4"],
+    correctAnswer: "3. 3"
   },
   {
     question: "What is the favorite color of the Knights Who Say 'Ni'?",
-    choices: ["Red", "Blue", "Green", "Yellow"],
-    correctAnswer: "Blue"
+    choices: ["1. Red", "2. Blue", "3. Green", "4. Yellow"],
+    correctAnswer: "2. Blue"
   },
   {
     question: "What is the main ingredient in the dish 'Spam, spam, spam, spam, spam'?",
-    choices: ["Bacon", "Eggs", "Lobster", "Spam"],
-    correctAnswer: "Spam"
+    choices: ["1. Bacon", "2. Eggs", "3. Lobster", "4. Spam"],
+    correctAnswer: "4. Spam"
   },
   {
     question: "What is the name of the killer rabbit in Monty Python and the Holy Grail?",
-    choices: ["Fluffy", "Thumper", "Sir Hops-a-Lot", "The Vorpal Bunny"],
-    correctAnswer: "The Vorpal Bunny"
+    choices: ["1. Fluffy", "2. The Messiah", "3. Sir Hops-a-Lot", "4. The Vorpal Bunny"],
+    correctAnswer: "4. The Vorpal Bunny"
   }
 ];
 
