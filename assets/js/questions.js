@@ -49,6 +49,9 @@ function displayQuestion() {
     choiceButton.addEventListener('click', function () {
       if (choice === currentQuestion.correctAnswer) {
         userScore++;
+        playCorrectSound();
+      } else {
+        playIncorrectSound();
       }
 
       currentQuestionIndex++;
