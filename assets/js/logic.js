@@ -53,17 +53,21 @@ function saveHighScore() {
     highscores.push(newScore);
     localStorage.setItem('highscores', JSON.stringify(highscores));
 
-    // GOT TO GET THIS WORKING!!
     if (userScore === questionsData.length) {
+      fullScoreSound.onended = function () {
+        window.location.href = 'highscores.html';
+      };
       playFullScoreSound();
     } else if (userScore === 0) {
+      noScoreSound.onended = function () {
+        window.location.href = 'highscores.html';
+      };
       playNoScoreSound();
+    } else {
+      window.location.href = 'highscores.html';
     }
-    //
-
-    window.location.href = 'highscores.html';
   } else {
-    alert('Please enter your initials, good Knight.');
+    alert('Please enter your initials, Good Knight.');
   }
 }
 

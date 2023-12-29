@@ -25,6 +25,8 @@ The app must include the following features/functionality:
 
 * As an extra, I've added a 'dark mode' option which the user can toggle.
 
+* There's also some hidden Monty Python sound effects if you're either a very good, or very naughty boy. Because you're certainly not the messiah.
+
 ### Links
 
 [Link to the deployed website](https://jonnoclifford.github.io/code-quiz/)
@@ -33,17 +35,17 @@ The app must include the following features/functionality:
 
 ## Installation
 
-No installation required - index.html, highscores.html, style.css, all js files, images and this README pushed to Github.
+No installation required - index.html, highscores.html, style.css, all js and sfx files, images and this README pushed to Github.
 
 ## Usage
 
-Open website at [https://jonnoclifford.github.io/Password-Generator](https://jonnoclifford.github.io/Password-Generator) and then click 'Generate Password'.
+Open website at [https://jonnoclifford.github.io/code-quiz](https://jonnoclifford.github.io/code-quiz) and then play!
 
 ## Mock-Up
 
 The following gif shows the web application's appearance and functionality:
 
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their initials, then clears their initials and starts over.](./assets/images/code-quiz-demo.gif)
+![Animation of quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their initials, then clears their initials and starts over.](./assets/images/code-quiz-demo.gif)
 
 ## Credits
 
@@ -58,6 +60,10 @@ Supported by Edx teaching staff and multiple websites, YouTube tutorials and for
 • Stack Overflow - Save dark mode in localstorage: https://stackoverflow.com/questions/62047483/save-dark-mode-to-local-storage-in-javascript
 
 • Stack Overflow - How do I retain toggle state across website: https://stackoverflow.com/questions/64652593/how-do-i-retain-toggle-state-across-website
+
+• Stack Overflow - Audio Triggers in Javascript: https://stackoverflow.com/questions/15707745/audio-trigger-in-javascript
+
+• DEV - How to Play Sound on Button Click in JavaScript: https://dev.to/shantanu_jana/how-to-play-sound-on-button-click-in-javascript-3m48
 
 ## License
 

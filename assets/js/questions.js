@@ -51,6 +51,8 @@ function displayQuestion() {
         userScore++;
         playCorrectSound();
       } else {
+        timerValue -= 10000;
+        updateTimerDisplay();
         playIncorrectSound();
       }
 
@@ -65,6 +67,7 @@ function displayQuestion() {
     choicesContainer.appendChild(choiceButton);
   });
 }
+
 
 function showEndScreen() {
   document.getElementById('questions').classList.add('hide');

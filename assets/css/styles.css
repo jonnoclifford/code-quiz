@@ -116,7 +116,7 @@ li:nth-child(odd) {
 #time {
   font-size: 24px;
   font-weight: bold;
-  color: #f8f8f8;
+  color: #000;
 }
 
 .feedback {
@@ -171,6 +171,10 @@ body.dark-mode {
 
 .dark-mode li:nth-child(even) {
   background-color: #563d7c;
+}
+
+body.dark-mode #time {
+  color: #fff;
 }
 
 
