@@ -1,5 +1,5 @@
 document.getElementById('start').addEventListener('click', function () {
-  startTimer(10);
+  startTimer(60);
 });
 
 let timerInterval;
@@ -16,9 +16,15 @@ function startTimer(initialSeconds) {
     if (timerValue <= 0) {
       clearInterval(timerInterval);
       alert("You've run out of time!");
+      showEndScreen();
+    }
+
+    if (currentQuestionIndex === questionsData.length) {
+      clearInterval(timerInterval);
     }
   }, 10);
 }
+
 
 function updateTimerDisplay() {
   const seconds = (timerValue / 1000).toFixed(2);

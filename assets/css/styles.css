@@ -108,6 +108,17 @@ li:nth-child(odd) {
   width: 33.33% !important;
 }
 
+#timer-display {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#time {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+
 .feedback {
   font-style: italic;
   font-size: 120%;
